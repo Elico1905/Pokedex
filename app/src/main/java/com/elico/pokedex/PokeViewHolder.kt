@@ -1,6 +1,7 @@
 package com.elico.pokedex
 
 import android.view.View
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.elico.pokedex.databinding.ItemListBinding
 import com.squareup.picasso.Picasso
@@ -12,5 +13,11 @@ class PokeViewHolder(view: View):RecyclerView.ViewHolder(view){
     fun bind(poke:String,numero:Int){
         binding.recyclerNombre.text = poke
         Picasso.get().load("${url}${numero}.png").into(binding.recyclerImagen)
+        binding.recyclerNum.text = "${numero}"
+        binding.recyclerImagen.setOnClickListener {
+            println("-------")
+            println("nombre: ${poke}    -----   numero:${numero}")
+            println("-------")
+        }
     }
 }

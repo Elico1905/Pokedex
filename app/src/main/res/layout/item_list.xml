@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/temp"
-    android:layout_width="120dp"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginBottom="10dp"
     android:backgroundTint="#DAF4FF"
     android:clickable="true"
     android:foreground="?android:selectableItemBackground"
-    app:cardCornerRadius="20dp"
-    android:layout_marginBottom="10dp">
+    app:cardCornerRadius="20dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:paddingLeft="10dp"
         android:paddingTop="5dp"
         android:paddingRight="10dp"
@@ -26,7 +28,12 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
+            android:layout_marginStart="15dp"
             android:src="@drawable/vina" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="0dp" />
 
         <TextView
             android:id="@+id/recycler_nombre"
@@ -34,7 +41,36 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Charizard"
-            android:textSize="17dp" />
+            android:textSize="25dp" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="# "
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/recycler_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textSize="25dp" />
+
+        </LinearLayout>
+
 
     </LinearLayout>
 
